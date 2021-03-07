@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dwj.freshmall.mapper.DeliverInfoMapper">
+  <resultMap id="BaseResultMap" type="com.dwj.freshmall.model.DeliverInfo">
+    <id column="wlid" jdbcType="VARCHAR" property="wlid" />
+    <result column="orderid" jdbcType="VARCHAR" property="orderid" />
+    <result column="deliverman" jdbcType="VARCHAR" property="deliverman" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="date" jdbcType="TIMESTAMP" property="date" />
+    <result column="location" jdbcType="VARCHAR" property="location" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from deliver
+    where wlid = #{wlid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.dwj.freshmall.model.DeliverInfo">
+    insert into deliver (wlid, orderid, deliverman, 
+      status, date, location
+      )
+    values (#{wlid,jdbcType=VARCHAR}, #{orderid,jdbcType=VARCHAR}, #{deliverman,jdbcType=VARCHAR}, 
+      #{status,jdbcType=VARCHAR}, #{date,jdbcType=TIMESTAMP}, #{location,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.dwj.freshmall.model.DeliverInfo">
+    update deliver
+    set orderid = #{orderid,jdbcType=VARCHAR},
+      deliverman = #{deliverman,jdbcType=VARCHAR},
+      status = #{status,jdbcType=VARCHAR},
+      date = #{date,jdbcType=TIMESTAMP},
+      location = #{location,jdbcType=VARCHAR}
+    where wlid = #{wlid,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select wlid, orderid, deliverman, status, date, location
+    from deliver
+    where wlid = #{wlid,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select wlid, orderid, deliverman, status, date, location
+    from deliver
+  </select>
+</mapper>
