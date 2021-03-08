@@ -6,6 +6,8 @@ import com.dwj.freshmall.service.UserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserInfoServiceImpl  implements UserInfoService {
 
@@ -37,4 +39,13 @@ public class UserInfoServiceImpl  implements UserInfoService {
         }
         return flag;
     }
+
+    @Override
+    public List<UserInfo> selAll() {
+            System.out.println();
+            return userInfoMapper.selectAll();
+        }
+
+
+
 }

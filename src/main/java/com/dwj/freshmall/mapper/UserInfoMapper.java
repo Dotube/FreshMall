@@ -10,9 +10,11 @@ public interface UserInfoMapper {
 
     UserInfo selectByPrimaryKey(Integer id);
 
-    List<UserInfo> selectAll();
-
     int updateByPrimaryKey(UserInfo record);
 
     UserInfo selectByUserName(String name);
+
+    List<UserInfo> selectAll();
+
+
 }

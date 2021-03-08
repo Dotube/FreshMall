@@ -7,6 +7,8 @@ public class UserInfo {
 
     private String password;
 
+
+
     private String icon;
 
     public Integer getId() {
@@ -40,4 +42,7 @@ public class UserInfo {
     public void setIcon(String icon) {
         this.icon = icon == null ? null : icon.trim();
     }
+
+
+
 }

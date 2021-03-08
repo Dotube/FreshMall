@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @RestController
 @RequestMapping("/user")
@@ -31,4 +32,10 @@ public class UserController {
         return resultVO;
     };
 
-}
+    @RequestMapping("selAll")
+    public List<UserInfo> selAll(){
+       // System.out.println(userInfo);
+        return userInfoService.selAll();
+    }
+
+  }
