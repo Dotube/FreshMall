@@ -1,7 +1,7 @@
 package com.dwj.freshmall.model;
 
 public class UserInfo {
-    private String id;
+    private Integer id;
 
     private String name;
 
@@ -9,12 +9,12 @@ public class UserInfo {
 
     private String icon;
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id == null ? null : id.trim();
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {

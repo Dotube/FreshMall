@@ -1,11 +1,11 @@
 package com.dwj.freshmall.model;
 
 public class CommentInfo {
-    private String commentid;
+    private Integer commentid;
 
-    private String userid;
+    private Integer userid;
 
-    private String goodid;
+    private Integer goodid;
 
     private String detail;
 
@@ -21,28 +21,28 @@ public class CommentInfo {
 
     private Float rate;
 
-    public String getCommentid() {
+    public Integer getCommentid() {
         return commentid;
     }
 
-    public void setCommentid(String commentid) {
-        this.commentid = commentid == null ? null : commentid.trim();
+    public void setCommentid(Integer commentid) {
+        this.commentid = commentid;
     }
 
-    public String getUserid() {
+    public Integer getUserid() {
         return userid;
     }
 
-    public void setUserid(String userid) {
-        this.userid = userid == null ? null : userid.trim();
+    public void setUserid(Integer userid) {
+        this.userid = userid;
     }
 
-    public String getGoodid() {
+    public Integer getGoodid() {
         return goodid;
     }
 
-    public void setGoodid(String goodid) {
-        this.goodid = goodid == null ? null : goodid.trim();
+    public void setGoodid(Integer goodid) {
+        this.goodid = goodid;
     }
 
     public String getDetail() {

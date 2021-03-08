@@ -1,16 +1,14 @@
 package com.dwj.freshmall.mapper;
 
 import com.dwj.freshmall.model.UserInfo;
-
-import javax.jws.soap.SOAPBinding;
 import java.util.List;
 
 public interface UserInfoMapper {
-    int deleteByPrimaryKey(String id);
+    int deleteByPrimaryKey(Integer id);
 
     int insert(UserInfo record);
 
-    UserInfo selectByPrimaryKey(String id);
+    UserInfo selectByPrimaryKey(Integer id);
 
     List<UserInfo> selectAll();
 

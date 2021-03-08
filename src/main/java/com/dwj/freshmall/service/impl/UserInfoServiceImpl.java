@@ -24,4 +24,17 @@ public class UserInfoServiceImpl  implements UserInfoService {
         }
         return flag;
     }
+
+    @Override
+    public int register(UserInfo userInfo) {
+        int flag=0;
+        UserInfo u = userInfoMapper.selectByUserName(userInfo.getName());
+        if(u ==null){
+            userInfoMapper.insert(userInfo);
+        }
+        else {
+            flag=2;
+        }
+        return flag;
+    }
 }

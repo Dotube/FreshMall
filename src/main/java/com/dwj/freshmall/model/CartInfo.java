@@ -1,36 +1,36 @@
 package com.dwj.freshmall.model;
 
 public class CartInfo {
-    private String id;
+    private Integer id;
 
-    private String userid;
+    private Integer userid;
 
-    private String goodid;
+    private Integer goodid;
 
     private Integer num;
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id == null ? null : id.trim();
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public String getUserid() {
+    public Integer getUserid() {
         return userid;
     }
 
-    public void setUserid(String userid) {
-        this.userid = userid == null ? null : userid.trim();
+    public void setUserid(Integer userid) {
+        this.userid = userid;
     }
 
-    public String getGoodid() {
+    public Integer getGoodid() {
         return goodid;
     }
 
-    public void setGoodid(String goodid) {
-        this.goodid = goodid == null ? null : goodid.trim();
+    public void setGoodid(Integer goodid) {
+        this.goodid = goodid;
     }
 
     public Integer getNum() {

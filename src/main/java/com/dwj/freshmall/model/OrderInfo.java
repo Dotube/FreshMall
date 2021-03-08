@@ -3,11 +3,11 @@ package com.dwj.freshmall.model;
 import java.util.Date;
 
 public class OrderInfo {
-    private String id;
+    private Integer id;
 
-    private String orderid;
+    private Integer orderid;
 
-    private String goodid;
+    private Integer goodid;
 
     private String status;
 
@@ -19,28 +19,28 @@ public class OrderInfo {
 
     private String userid;
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id == null ? null : id.trim();
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public String getOrderid() {
+    public Integer getOrderid() {
         return orderid;
     }
 
-    public void setOrderid(String orderid) {
-        this.orderid = orderid == null ? null : orderid.trim();
+    public void setOrderid(Integer orderid) {
+        this.orderid = orderid;
     }
 
-    public String getGoodid() {
+    public Integer getGoodid() {
         return goodid;
     }
 
-    public void setGoodid(String goodid) {
-        this.goodid = goodid == null ? null : goodid.trim();
+    public void setGoodid(Integer goodid) {
+        this.goodid = goodid;
     }
 
     public String getStatus() {

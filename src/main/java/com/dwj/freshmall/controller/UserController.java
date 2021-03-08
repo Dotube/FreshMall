@@ -22,6 +22,13 @@ public class UserController {
             int status = userInfoService.login(userInfo);
             ResultVO  resultVO= new ResultVO(200,status+"");
             return resultVO;
-    }
+    };
+
+    @RequestMapping("register")
+    public ResultVO register(@RequestBody UserInfo userInfo){
+        int status = userInfoService.register(userInfo);
+        ResultVO  resultVO= new ResultVO(200,status+"");
+        return resultVO;
+    };
 
 }

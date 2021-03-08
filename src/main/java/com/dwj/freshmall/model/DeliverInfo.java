@@ -3,7 +3,7 @@ package com.dwj.freshmall.model;
 import java.util.Date;
 
 public class DeliverInfo {
-    private String wlid;
+    private Integer wlid;
 
     private String orderid;
 
@@ -15,12 +15,12 @@ public class DeliverInfo {
 
     private String location;
 
-    public String getWlid() {
+    public Integer getWlid() {
         return wlid;
     }
 
-    public void setWlid(String wlid) {
-        this.wlid = wlid == null ? null : wlid.trim();
+    public void setWlid(Integer wlid) {
+        this.wlid = wlid;
     }
 
     public String getOrderid() {

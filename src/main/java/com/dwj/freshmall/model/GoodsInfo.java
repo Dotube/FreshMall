@@ -1,9 +1,9 @@
 package com.dwj.freshmall.model;
 
 public class GoodsInfo {
-    private String id;
+    private Integer id;
 
-    private String goodid;
+    private Integer goodid;
 
     private String name;
 
@@ -33,20 +33,20 @@ public class GoodsInfo {
 
     private Integer remain;
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id == null ? null : id.trim();
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public String getGoodid() {
+    public Integer getGoodid() {
         return goodid;
     }
 
-    public void setGoodid(String goodid) {
-        this.goodid = goodid == null ? null : goodid.trim();
+    public void setGoodid(Integer goodid) {
+        this.goodid = goodid;
     }
 
     public String getName() {

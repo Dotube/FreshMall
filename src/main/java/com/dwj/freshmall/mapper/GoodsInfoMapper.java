@@ -4,11 +4,11 @@ import com.dwj.freshmall.model.GoodsInfo;
 import java.util.List;
 
 public interface GoodsInfoMapper {
-    int deleteByPrimaryKey(String id);
+    int deleteByPrimaryKey(Integer id);
 
     int insert(GoodsInfo record);
 
-    GoodsInfo selectByPrimaryKey(String id);
+    GoodsInfo selectByPrimaryKey(Integer id);
 
     List<GoodsInfo> selectAll();
 

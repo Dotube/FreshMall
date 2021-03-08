@@ -1,9 +1,9 @@
 package com.dwj.freshmall.model;
 
 public class AddressInfo {
-    private String id;
+    private Integer id;
 
-    private String userid;
+    private Integer userid;
 
     private String name;
 
@@ -11,20 +11,20 @@ public class AddressInfo {
 
     private String address;
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id == null ? null : id.trim();
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public String getUserid() {
+    public Integer getUserid() {
         return userid;
     }
 
-    public void setUserid(String userid) {
-        this.userid = userid == null ? null : userid.trim();
+    public void setUserid(Integer userid) {
+        this.userid = userid;
     }
 
     public String getName() {

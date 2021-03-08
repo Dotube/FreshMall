@@ -4,8 +4,9 @@ import org.springframework.stereotype.Service;
 
 
 
-public interface UserInfoService  {
+public interface UserInfoService {
 
     int login(UserInfo userInfo);
 
+    int register(UserInfo userInfo);
 }

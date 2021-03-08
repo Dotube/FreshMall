@@ -4,11 +4,11 @@ import com.dwj.freshmall.model.DeliverInfo;
 import java.util.List;
 
 public interface DeliverInfoMapper {
-    int deleteByPrimaryKey(String wlid);
+    int deleteByPrimaryKey(Integer wlid);
 
     int insert(DeliverInfo record);
 
-    DeliverInfo selectByPrimaryKey(String wlid);
+    DeliverInfo selectByPrimaryKey(Integer wlid);
 
     List<DeliverInfo> selectAll();
 

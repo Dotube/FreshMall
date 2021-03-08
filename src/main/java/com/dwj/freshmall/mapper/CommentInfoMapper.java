@@ -4,11 +4,11 @@ import com.dwj.freshmall.model.CommentInfo;
 import java.util.List;
 
 public interface CommentInfoMapper {
-    int deleteByPrimaryKey(String commentid);
+    int deleteByPrimaryKey(Integer commentid);
 
     int insert(CommentInfo record);
 
-    CommentInfo selectByPrimaryKey(String commentid);
+    CommentInfo selectByPrimaryKey(Integer commentid);
 
     List<CommentInfo> selectAll();
 

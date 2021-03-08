@@ -4,11 +4,11 @@ import com.dwj.freshmall.model.AddressInfo;
 import java.util.List;
 
 public interface AddressInfoMapper {
-    int deleteByPrimaryKey(String id);
+    int deleteByPrimaryKey(Integer id);
 
     int insert(AddressInfo record);
 
-    AddressInfo selectByPrimaryKey(String id);
+    AddressInfo selectByPrimaryKey(Integer id);
 
     List<AddressInfo> selectAll();
 
