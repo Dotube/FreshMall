@@ -36,6 +36,13 @@ public class UserController {
     public List<UserInfo> selAll(){
        // System.out.println(userInfo);
         return userInfoService.selAll();
-    }
+    };
+
+    @RequestMapping("selAva")
+    public String selAva(String name){
+        // System.out.println(userInfo);
+        return userInfoService.selAva(name);
+    };
+
 
   }

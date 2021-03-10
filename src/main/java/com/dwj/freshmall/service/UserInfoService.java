@@ -14,6 +14,7 @@ public interface UserInfoService {
 
     List<UserInfo> selAll();
 
-
+    String selAva(String name);
+    
 }
 

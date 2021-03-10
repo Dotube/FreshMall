@@ -8,7 +8,7 @@ public interface GoodsInfoMapper {
 
     int insert(GoodsInfo record);
 
-    GoodsInfo selectByPrimaryKey(Integer id);
+    GoodsInfo  selectByPrimaryKey(Integer id);
 
     List<GoodsInfo> selectAll();
 

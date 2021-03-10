@@ -46,6 +46,10 @@ public class UserInfoServiceImpl  implements UserInfoService {
             return userInfoMapper.selectAll();
         }
 
+    @Override
+    public String selAva(String name) {
+        return userInfoMapper.selectavator(name);
+    }
 
 
 }

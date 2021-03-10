@@ -16,5 +16,6 @@ public interface UserInfoMapper {
 
     List<UserInfo> selectAll();
 
+    String selectavator(String name);
 
 }
