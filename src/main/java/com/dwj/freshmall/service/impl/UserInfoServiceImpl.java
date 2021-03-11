@@ -51,5 +51,10 @@ public class UserInfoServiceImpl  implements UserInfoService {
         return userInfoMapper.selectavator(name);
     }
 
+    @Override
+    public UserInfo selbyname(String name) {
+        return userInfoMapper.selectByUserName(name);
+    }
+
 
 }

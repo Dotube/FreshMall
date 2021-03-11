@@ -18,4 +18,6 @@ public interface UserInfoMapper {
 
     String selectavator(String name);
 
+
+
 }

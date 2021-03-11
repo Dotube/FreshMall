@@ -13,4 +13,6 @@ public interface AddressInfoMapper {
     List<AddressInfo> selectAll();
 
     int updateByPrimaryKey(AddressInfo record);
+
+    List<AddressInfo> selectByuserid(Integer userid);
 }
