@@ -8,4 +8,12 @@ public interface AddressInfoService {
 
     List<AddressInfo> selbyuser(Integer userid);
 
+    void del(Integer id);
+
+    void update(AddressInfo addressInfo);
+
+    void add(AddressInfo addressInfo);
+
+    AddressInfo selbyid(Integer id);
+
 }

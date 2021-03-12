@@ -19,4 +19,26 @@ public class AddressInfoServiceImpl implements AddressInfoService {
     public List<AddressInfo> selbyuser(Integer userid) {
         return addressInfoMapper.selectByuserid(userid);
     }
+
+    @Override
+    public void del(Integer id) {
+        addressInfoMapper.deleteByPrimaryKey(id);
+    }
+
+    @Override
+    public void update(AddressInfo addressInfo) {
+        addressInfoMapper.updateByPrimaryKey(addressInfo);
+    }
+
+    @Override
+    public void add(AddressInfo addressInfo) {
+        addressInfoMapper.insert(addressInfo);
+    }
+
+    @Override
+    public AddressInfo selbyid(Integer id) {
+        return addressInfoMapper.selectByPrimaryKey(id);
+    }
+
+
 }
