@@ -13,4 +13,7 @@ public interface GoodsInfoMapper {
     List<GoodsInfo> selectAll();
 
     int updateByPrimaryKey(GoodsInfo record);
+
+    List<GoodsInfo>  selectbykind(Integer category);
+
 }

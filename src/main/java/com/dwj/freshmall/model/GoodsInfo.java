@@ -27,7 +27,7 @@ public class GoodsInfo {
 
     private Float price;
 
-    private String category;
+    private Integer category;
 
     private String status;
 
@@ -137,12 +137,12 @@ public class GoodsInfo {
         this.price = price;
     }
 
-    public String getCategory() {
+    public Integer getCategory() {
         return category;
     }
 
-    public void setCategory(String category) {
-        this.category = category == null ? null : category.trim();
+    public void setCategory(Integer category) {
+        this.category = category ;
     }
 
     public String getStatus() {

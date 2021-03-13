@@ -12,5 +12,8 @@ public interface GoodsInfoService {
 
 
     GoodsInfo selbyid(Integer id);
+
+    List<GoodsInfo> selbykind(Integer category);
+
 }
 

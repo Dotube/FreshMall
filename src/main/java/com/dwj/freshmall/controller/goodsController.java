@@ -29,4 +29,10 @@ public class goodsController {
         return goodsInfoService.selbyid(id);
     };
 
+
+    @RequestMapping("selbykind/{category}")
+    public List<GoodsInfo> selbykind(@PathVariable Integer category){
+        return goodsInfoService.selbykind(category);
+    };
+
 }

@@ -28,5 +28,10 @@ public class GoodsInfoServiceImpl  implements GoodsInfoService {
         return goodsInfoMapper.selectByPrimaryKey(id);
     }
 
+    @Override
+    public List<GoodsInfo> selbykind(Integer category) {
+        return goodsInfoMapper.selectbykind(category);
+    }
+
 
 }

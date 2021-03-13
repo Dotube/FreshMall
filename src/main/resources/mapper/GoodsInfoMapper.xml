@@ -15,7 +15,7 @@
     <result column="detail" jdbcType="VARCHAR" property="detail" />
     <result column="sale" jdbcType="INTEGER" property="sale" />
     <result column="price" jdbcType="REAL" property="price" />
-    <result column="category" jdbcType="VARCHAR" property="category" />
+    <result column="category" jdbcType="INTEGER" property="category" />
     <result column="status" jdbcType="VARCHAR" property="status" />
     <result column="remain" jdbcType="INTEGER" property="remain" />
   </resultMap>
@@ -49,7 +49,7 @@
       detail = #{detail,jdbcType=VARCHAR},
       sale = #{sale,jdbcType=INTEGER},
       price = #{price,jdbcType=REAL},
-      category = #{category,jdbcType=VARCHAR},
+      category = #{category,jdbcType=INTEGER},
       status = #{status,jdbcType=VARCHAR},
       remain = #{remain,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
@@ -65,5 +65,10 @@
     detail, sale, price, category, status, remain
     from goods
   </select>
-
+  <select id="selectbykind" resultMap="BaseResultMap">
+    select id, goodid, name, kind, rate, images, images2, images3, images4, images5,
+    detail, sale, price, category, status, remain
+    from goods
+    where category =  #{category}
+  </select>
 </mapper>
