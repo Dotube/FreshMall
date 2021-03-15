@@ -9,6 +9,9 @@ public class CartInfo {
 
     private Integer num;
 
+
+    private Boolean checked;
+
     public Integer getId() {
         return id;
     }
@@ -40,4 +43,13 @@ public class CartInfo {
     public void setNum(Integer num) {
         this.num = num;
     }
+
+    public Boolean getChecked() {
+        return checked;
+    }
+
+    public void setChecked(Boolean checked) {
+        this.checked = checked;
+    }
+
 }

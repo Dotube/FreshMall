@@ -71,4 +71,10 @@
     from goods
     where category =  #{category}
   </select>
+  <select id="selectByName"  resultMap="BaseResultMap">
+    select id, goodid, name, kind, rate, images, images2, images3, images4, images5,
+    detail, sale, price, category, status, remain
+    from goods
+    where name like concat('%',#{name},'%')
+  </select>
 </mapper>

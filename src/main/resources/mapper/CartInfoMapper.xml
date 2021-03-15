@@ -6,31 +6,39 @@
     <result column="userid" jdbcType="INTEGER" property="userid" />
     <result column="goodid" jdbcType="INTEGER" property="goodid" />
     <result column="num" jdbcType="INTEGER" property="num" />
+    <result column="checked" jdbcType="BIT" property="checked" />
   </resultMap>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from cart
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.dwj.freshmall.model.CartInfo">
-    insert into cart (id, userid, goodid, 
-      num)
-    values (#{id,jdbcType=INTEGER}, #{userid,jdbcType=INTEGER}, #{goodid,jdbcType=INTEGER}, 
-      #{num,jdbcType=INTEGER})
+    insert into cart ( userid, goodid,
+      num,checked)
+    values (#{userid,jdbcType=INTEGER}, #{goodid,jdbcType=INTEGER},
+      #{num,jdbcType=INTEGER},   #{checked,jdbcType=BIT})
+      ON DUPLICATE KEY UPDATE num = num +  #{num,jdbcType=INTEGER}
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.dwj.freshmall.model.CartInfo">
     update cart
     set userid = #{userid,jdbcType=INTEGER},
       goodid = #{goodid,jdbcType=INTEGER},
       num = #{num,jdbcType=INTEGER}
+      checked = #{checked,jdbcType=BIT}
     where id = #{id,jdbcType=INTEGER}
   </update>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select id, userid, goodid, num
+    select id, userid, goodid, num,checked
     from cart
     where id = #{id,jdbcType=INTEGER}
   </select>
   <select id="selectAll" resultMap="BaseResultMap">
-    select id, userid, goodid, num
+    select id, userid, goodid, num,checked
     from cart
+  </select>
+
+  <select id="queryMyShoppingCart" resultType="com.dwj.freshmall.vo.ShoppingCart">
+    SELECT cart.checked,cart.userid,cart.num ,goods.category,goods.detail,goods.name as goodsName,goods.price as price,goods.images as image,goods.id as id
+    FROM cart inner join goods on cart.goodid=goods.id where cart.userid=#{userid}
   </select>
 </mapper>

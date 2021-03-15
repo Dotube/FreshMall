@@ -16,10 +16,10 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.dwj.freshmall.model.OrderInfo">
-    insert into order (id, orderid, goodid, 
-      status, date, price, 
+    insert into `order` (orderid, goodid,
+      status, `date`, price,
       num, userid)
-    values (#{id,jdbcType=INTEGER}, #{orderid,jdbcType=INTEGER}, #{goodid,jdbcType=INTEGER}, 
+    values (#{orderid,jdbcType=INTEGER}, #{goodid,jdbcType=INTEGER},
       #{status,jdbcType=VARCHAR}, #{date,jdbcType=TIMESTAMP}, #{price,jdbcType=REAL}, 
       #{num,jdbcType=INTEGER}, #{userid,jdbcType=VARCHAR})
   </insert>
@@ -43,4 +43,12 @@
     select id, orderid, goodid, status, date, price, num, userid
     from order
   </select>
+  <select id="queryMyorder" resultType="com.dwj.freshmall.vo.Myorder">
+    select `order`.orderid,`order`.userid,`order`.num,`order`.price,goods.detail,goods.name as goodsName,     goods.images as image,goods.id as id
+    from goods inner join `order`
+    on goods.goodid=`order`.goodid where `order`.userid=#{userid}
+
+  </select>
+
+
 </mapper>

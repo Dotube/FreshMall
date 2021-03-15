@@ -16,4 +16,7 @@ public interface GoodsInfoMapper {
 
     List<GoodsInfo>  selectbykind(Integer category);
 
+    List<GoodsInfo>  selectByName(String name);
+
+
 }

@@ -33,5 +33,10 @@ public class GoodsInfoServiceImpl  implements GoodsInfoService {
         return goodsInfoMapper.selectbykind(category);
     }
 
+    @Override
+    public List<GoodsInfo> selbyname(String name) {
+        return goodsInfoMapper.selectByName(name);
+    }
+
 
 }
